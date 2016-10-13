@@ -227,21 +227,18 @@ a:focus {
 .portfolio-section {
   width: 100%;
   padding: 50px 0;
-  /*color: white;*/
-  /*background: url(../img/downloads-bg.jpg) no-repeat center center scroll;*/
+
+
   background-color: white;
   color: #000;
-  /*-webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;*/
+
   line-height: 1;
 }
 .resume-section {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+  background: url(../img/butterfly-bg-bw.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
