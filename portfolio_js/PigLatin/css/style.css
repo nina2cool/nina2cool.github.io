@@ -1,0 +1,34 @@
+h1 {
+    font-family: 'Annie Use Your Telescope', cursive;
+    text-transform: capitalize;
+}
+
+/* fancy font for the header */
+
+#fancy_font {
+    font-family: 'Annie Use Your Telescope', cursive;
+    text-transform: capitalize;
+}
+
+.fancy_font {
+    font-family: 'Annie Use Your Telescope', cursive;
+}
+
+.warning {
+    font-size: 1.2em;
+    color: red;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.navbar-default {
+  font-weight: bold;
+}
+
+footer .navbar-default {
+  padding-top: 20px;
+}
