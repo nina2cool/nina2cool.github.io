@@ -6,6 +6,7 @@
 // var prompt = require('prompt');
 // prompt.start();
 
+
 var textArea = document.getElementById('textArea');
 var player1text = document.getElementById('player1text');
 var player2text = document.getElementById('player2text');
@@ -78,18 +79,22 @@ function activatePlayerTwo() {
 }
 
 button.addEventListener('click', function(event) {
+
     var hand1 = document.getElementById('textInput1').value;
     var hand2 = document.getElementById('textInput2').value;
     var textArea = document.getElementById('textArea');
     event.preventDefault();
-    console.log(event);
-    console.log('clicked the button');
-    //console.log('word is ' + word);
-    console.log(rockPaperScissors(hand1, hand2));
-    //document.getElementById("textArea").value = pigLatin(word); << WHY DOESN'T THIS WORK???
     document.getElementById("textArea").className = "animated rollIn";
     textArea.innerHTML = rockPaperScissors(hand1, hand2);
+
+    clear.show();
+
 });
+
+clear.addEventListener('click', function(event) {
+    location.reload();
+});
+
 
 function rockPaperScissors(hand1, hand2) {
 
