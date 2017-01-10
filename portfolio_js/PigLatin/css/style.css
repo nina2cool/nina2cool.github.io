@@ -14,7 +14,7 @@ hr {
 }
 
 hr.light {
-    border-color: white;
+    border-color: #fff;
 }
 
 h1 {
@@ -22,11 +22,20 @@ h1 {
     text-transform: capitalize;
 }
 
+.btn {
+  background: #F05F40;
+  color: #fff;
+}
+
+.btn:hover {
+  color: #f2f2f2;
+  background: #ee4e2b;
+}
 
 /*  navbar  */
 
 .navbar-default {
-    background-color: white;
+    background-color: #fff;
     border-color: rgba(34, 34, 34, 0.05);
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     -webkit-transition: all 0.35s;
@@ -81,16 +90,16 @@ h1 {
         color: rgba(255, 255, 255, 0.7);
     }
     .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
-        color: white;
+        color: #fff;
     }
     .navbar-default .nav>li>a, .navbar-default .nav>li>a:focus {
         color: rgba(255, 255, 255, 0.7);
     }
     .navbar-default .nav>li>a:hover, .navbar-default .nav>li>a:focus:hover {
-        color: white;
+        color: #fff;
     }
     .navbar-default.affix {
-        background-color: white;
+        background-color: #fff;
         border-color: rgba(34, 34, 34, 0.05);
     }
     .navbar-default.affix .navbar-header .navbar-brand {
@@ -123,7 +132,7 @@ header {
     /*background-image: url('../img/rome.jpg');*/
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/rome.jpg) no-repeat center;
     text-align: center;
-    color: white;
+    color: #fff;
 }
 
 header .header-content {
@@ -200,7 +209,7 @@ header .header-content .header-content-inner p {
 }
 
 footer {
-    color: white;
+    color: #fff;
     text-align: center;
     font-weight: bold;
 }
