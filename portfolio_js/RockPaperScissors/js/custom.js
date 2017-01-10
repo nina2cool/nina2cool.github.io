@@ -78,7 +78,7 @@ button.addEventListener('click', function(event) {
     var hand2 = document.getElementById('textInput2').value;
     var textArea = document.getElementById('textArea');
     event.preventDefault();
-    document.getElementById("textArea").className = "animated jello winner_font";
+    document.getElementById("textArea").className = "animated fadeIn winner_font";
     textArea.innerHTML = rockPaperScissors(hand1, hand2);
 
 });
