@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Towers of Hanoi</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts  -->
-  <link href="https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Towers of Hanoi</title>
+    <link rel="stylesheet" href="css/css-reset.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here" rel="stylesheet">
 </head>
+
 <body>
-  <h1>Towers of Hanoi</h1>
-  <div data-stack="1">
-    <div data-block="100"></div>
-    <div data-block="75"></div>
-    <div data-block="50"></div>
-    <div data-block="25"></div>
-  </div>
-  <div data-stack="2">
-  </div>
-  <div data-stack="3">
-  </div>
-  <div id="announce-error"></div>
-  <div id="announce-number-of-turns">Number of Turns: 0</div>
-  <div id="announce-game-won"></div>
-  <script type="text/javascript" src="../../vendor/jquery/jquery.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+    <h1>Towers of Hanoi</h1>
+    <div id="announce-error"></div>
+    <div class="col-md-7 col-md-offset-5">
+        <div data-stack="1">
+            <div data-block="100"></div>
+            <div data-block="75"></div>
+            <div data-block="50"></div>
+            <div data-block="25"></div>
+        </div>
+        <div data-stack="2">
+        </div>
+        <div data-stack="3">
+        </div>
+    </div>
+
+    <div class="col-xs-12">
+
+
+        <div id="announce-number-of-turns">Number of Turns: 0</div>
+        <div id="announce-game-won"></div>
+
+        <h3>
+        Programmed in JavaScript and jQuery, Designed in HTML/CSS by the amazing Christina McMillan for ACA class
+    </h3>
+
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="../../vendor/jquery/jquery.js"></script>
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/script.js"></script>
+
 </body>
+
 </html>
