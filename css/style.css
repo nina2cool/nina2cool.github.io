@@ -1,5 +1,7 @@
 
-
+.modal-body p {
+  line-height: 1.4;
+}
 
 /*  PORTFOLIO SECTION  */
 
@@ -60,11 +62,9 @@ cursor: pointer;
 
 .tile_inner h4 {
     margin: 0px;
+    min-height: 40px;
 }
 
-.tile_inner img {
-  height: 30%;
-}
 
 .tile_inner img:hover {
   /*transform: rotateY(360deg);*/
@@ -80,10 +80,9 @@ cursor: pointer;
 
 .tile img {
     max-width: 100%;
-    width: 100%;
+    width: 60%;
     height: auto;
     margin-bottom: 1rem;
-
 }
 
 .btn {
