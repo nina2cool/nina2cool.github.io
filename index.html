@@ -120,36 +120,39 @@
 
                     <div class="toolbar mb2 mt2">
                         <button class="btn fil-cat" href="" data-rel="all">All</button>
-                        <button class="btn fil-cat" data-rel="html">HTML and CSS</button>
-                        <button class="btn fil-cat" data-rel="js">JavaScript and jQuery</button>
                         <button class="btn fil-cat" data-rel="react">ReactJS</button>
                         <button class="btn fil-cat" data-rel="express">Express.js</button>
+                        <button class="btn fil-cat" data-rel="js">JavaScript & jQuery</button>
+                    </div>
+
+                    <div class="toolbar mb2 mt2">
                         <button class="btn fil-cat" data-rel="mongo">MongoDB</button>
+                        <button class="btn fil-cat" data-rel="php">PHP & MySQL</button>
+                        <button class="btn fil-cat" data-rel="html">HTML & CSS</button>
                         <button class="btn fil-cat" data-rel="wp">WordPress</button>
-                        <button class="btn fil-cat" data-rel="php">PHP and MySQL</button>
                     </div>
 
 
                     <div id="portfolios">
 
-                        <div class="tile scale-anm react all col-md-3">
+                        <div class="tile scale-anm react mongo all col-md-3">
                             <div class="tile_inner" data-toggle="modal" data-target="#modalACAFinalProject">
                                 <h4>ACA Final Project</h4>
-                                <img src="img/portfolio/" alt="" title="" />
+                                <img src="img/portfolio/finalproject.jpg" alt="ACA Final Project" title="ACA Final Project" />
                             </div>
                         </div>
 
                         <div class="tile scale-anm react all col-md-3">
                             <div class="tile_inner" data-toggle="modal" data-target="#modalMovieListApp">
                                 <h4>Movie List App</h4>
-                                <img src="img/portfolio/" alt="" title="" />
+                                <img src="img/portfolio/movielistapp.jpg" alt="Movie List App" title="Movie List App" />
                             </div>
                         </div>
 
                         <div class="tile scale-anm php all col-md-3">
                             <div class="tile_inner" data-toggle="modal" data-target="#modalUFOPlatform">
                                 <h4>UFO Platform</h4>
-                                <img src="img/portfolio/" alt="" title="" />
+                                <img src="img/portfolio/ufoplatform.jpg" alt="UFO Platform" title="UFO Platform" />
                             </div>
                         </div>
 
@@ -172,14 +175,14 @@
                         <div class="tile scale-anm wp all col-md-3">
                             <div class="tile_inner" data-toggle="modal" data-target="#modalAngelaVanDeWalle">
                                 <h4>Angela VanDeWalle</h4>
-                                <img src="img/portfolio/" alt="" title="" />
+                                <img src="img/portfolio/angelavandewalle.jpg" alt="Angela VanDeWalle Design" title="Angela VanDeWalle Design" />
                             </div>
                         </div>
 
                         <div class="tile scale-anm wp all col-md-3">
                             <div class="tile_inner" data-toggle="modal" data-target="#modalCopelandJewelers">
                                 <h4>Copeland Jewelers</h4>
-                                <img src="img/portfolio/" alt="" title="" />
+                                <img src="img/portfolio/copelandjewelers.jpg" alt="Copeland Jewelers" title="Copeland Jewelers" />
                             </div>
                         </div>
 
@@ -187,14 +190,14 @@
                         <div class="tile scale-anm wp all col-md-3">
                             <div class="tile_inner" data-toggle="modal" data-target="#modalKittyKatFlat">
                                 <h4>KittyKatFlat</h4>
-                                <img src="img/portfolio/" alt="" title="" />
+                                <img src="img/portfolio/kittykatflat.jpg" alt="KittyKatFlat" title="KittyKatFlat" />
                             </div>
                         </div>
 
                         <div class="tile scale-anm wp all col-md-3">
                             <div class="tile_inner" data-toggle="modal" data-target="#modalUFO">
                                 <h4>UFO</h4>
-                                <img src="img/portfolio/" alt="" title="" />
+                                <img src="img/portfolio/ufo.jpg" alt="Unified Finance Organization" title="Unified Finance Organization" />
                             </div>
                         </div>
 
@@ -480,11 +483,13 @@
                     <h4 class="modal-title" id="myModalLabel">ACA Final Project</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                        The final project for the Advanced class required the following features: sign up/sign in authentication and database structure that allows User --> List --> Item. For fun, I added an API call to Yelp and embedded my movie list app. I also decorated it
+                        for the holidays since the final project was due in December. I was one of five students to present.
+                    </p>
                 </div>
                 <div class="modal-footer">
-                    <a href="#" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
+                    <a href="https://github.com/nina2cool/final-project-starter" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -500,11 +505,12 @@
                     <h4 class="modal-title" id="myModalLabel">Movie List App</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                        My first API! For Advanced class, we had to use React to build an app that accessed a movie database API and allowed users to search and save a movie list to local storage.
+                    </p>
                 </div>
                 <div class="modal-footer">
-                    <a href="#" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
+                    <a href="https://github.com/nina2cool/movie-list-starter" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -520,11 +526,19 @@
                     <h4 class="modal-title" id="myModalLabel">Unified Finance Organization Platform Site</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                        This site was built prior to my ACA classes. I used PHP and MySQL, and I will be the first to admit that it is sloppy and outdated...yet it still works for its purpose. My business partner at UFO wanted a site where she could organize our files and links
+                        for our clients. Some of our clients also have access. It's a simple premise and nothing really new, but it is useful to Brigitte on a daily basis. </p>
+                    <p> Since starting my classes, I have fantasized abuot bringing the site up to date and utilizing my new found powers of JavaScript, local storage, and my updated knowledge on CSS. I am updating bits of it at a time, and while the code
+                        has been around for years, I just recently uploaded it to GitHub.
+                    </p>
+                    <p>
+                        (This site is password-protected. Please ask for password if you wish to browse the site.)
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="http://www.unified-finance.org/platform/" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
+                    <a href="https://github.com/nina2cool/ufo_platform" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -582,11 +596,12 @@
                     <h4 class="modal-title" id="myModalLabel">Angela VanDeWalle Design</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      Site designed from scratch in WordPress for an Austin-based interior designer.  She wanted a simple site to show off her portfolio, with clean lines, and the option to add a blog later.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="http://www.angelavandewalle.com" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -602,11 +617,12 @@
                     <h4 class="modal-title" id="myModalLabel">Copeland Jewelers</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      Copeland Jewelers was looking to update their site a modern, clean design and incorporate e-commerce into their site. With the aid of colleagues, we redid their WordPress site and the client is very happy with the results.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="http://www.copelandjewelers.com" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -622,11 +638,12 @@
                     <h4 class="modal-title" id="myModalLabel">KittyKatFlat</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      Site designed from scratch in WordPress for a startup in Austin, Texas.  He wanted a blog and a site where he could show off his new product called KittyKatFlat.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="http://www.kittykatflat.com" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -642,11 +659,12 @@
                     <h4 class="modal-title" id="myModalLabel">Unified Finance Organization</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      I first created this site in 2014 with very little WordPress knowledge (hence the ugliness!).  As of Jan 2017, I am working with my partner Brigitte to revamp it (<a href="http://www.unified-finance.org/site2016/" target="_blank">click to see the new site design in progress</a>) and make it more modern.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="http://www.unified-finance.org" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -662,11 +680,13 @@
                     <h4 class="modal-title" id="myModalLabel">HootFly</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      I designed this site starting with a Bootstrap template and then customizing it to make it my own.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="http://www.hootfly.com/" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
+                    <a href="https://github.com/nina2cool/hootfly" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -682,11 +702,13 @@
                     <h4 class="modal-title" id="myModalLabel">Hill Country Gear</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      Originally created in html, CSS, JavaScript, I updated the site to php and pull data from MySQL.  The intent was to build a family business renting out camping gear. This idea didn't take off as I decided to go back to school and continue my education.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="http://www.hillcountrygear.com/" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
+                    <a href="https://github.com/nina2cool/HillCountryGear" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -702,11 +724,12 @@
                     <h4 class="modal-title" id="myModalLabel">Launch and Hire</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      This was a one-page scrolling site where I started with a Bootstrap template, and then customized it to fit my client's needs.  I discovered as adding this to my portfolio, that her site is down. The code is on GitHub.
+                    </p>
                 </div>
                 <div class="modal-footer">
-                    <a href="#" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
+                    <a href="https://github.com/nina2cool/launchandhire" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -722,11 +745,13 @@
                     <h4 class="modal-title" id="myModalLabel">Puzzle Site</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      Simple site for a neighborhood group I created.  It's mostly HTML and CSS, but I added some JavaScript so I can change what available dates are shown.  Not hard, but fun to add on.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="http://puzzle.hootfly.com/" class="btn btn-primary" target="_blank">Go to Page</a>
-                    <a href="#" class="btn btn-primary" target="_blank">View Code on GitHub</a>
+                    <a href="https://github.com/nina2cool/puzzle" class="btn btn-primary" target="_blank">View Code on GitHub</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -742,7 +767,9 @@
                     <h4 class="modal-title" id="myModalLabel">Pig Latin</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      My first JavaScript and jQuery app built in the ACA Intermediate class. So-say ool-cay!
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="portfolio_js/PigLatin/index.html" class="btn btn-primary" target="_blank">Go to Page</a>
@@ -762,7 +789,9 @@
                     <h4 class="modal-title" id="myModalLabel">Rock Paper Scissors</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      Another fun app where the code was written in JavaScript in my ACA Intermediate class.  I added images and made it look nice so my kids could play with it.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="portfolio_js/RockPaperScissors/index.html" class="btn btn-primary" target="_blank">Go to Page</a>
@@ -782,7 +811,9 @@
                     <h4 class="modal-title" id="myModalLabel">Tic Tac Toe</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      Simple game written in JavaScript and jQuery for my ACA Intermediate class.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="portfolio_js/TicTacToe/index.html" class="btn btn-primary" target="_blank">Go to Page</a>
@@ -803,7 +834,9 @@
                     <h4 class="modal-title" id="myModalLabel">Towers of Hanoi</h4>
                 </div>
                 <div class="modal-body">
-                    This is where text goes.
+                    <p>
+                      Towers of Hanoi game written in JavaScript and jQuery for my ACA Intermediate class.  I added the fanciness for fun.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <a href="portfolio_js/TowersOfHanoi/index.html" class="btn btn-primary" target="_blank">Go to Page</a>
