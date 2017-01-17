@@ -5,7 +5,7 @@ $(document).ready(function() {
         var selectedClass = "";
         $(".fil-cat").click(function() {
             selectedClass = $(this).attr("data-rel");
-            console.log(selectedClass);
+            // console.log(selectedClass);
             $("#portfolios").fadeTo(100, 0.1);
             $("#portfolios > div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
             setTimeout(function() {
