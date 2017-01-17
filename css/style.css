@@ -1,12 +1,85 @@
 /*  GENERAL STYLES  */
 
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Dosis', sans-serif;
+    color: #fff;
+    background-color: #111;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1;
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 20px;
+    }
+}
+
+a {
+    color: #42DCA3;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: #1d9b6c;
+}
+
+.light {
+    font-weight: 400;
+}
+
+li {
+    margin: 0 0 15px;
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+    li {
+        margin: 0 0 15px;
+        font-size: 20px;
+    }
+    .contact-row {
+        text-align: center;
+    }
+}
+
+
+/*  BUTTONS  */
+
 .btn {
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border-radius: 0;
     font-size: 1.5rem;
     text-decoration: none;
     cursor: pointer;
     display: inline-block;
     padding: .5rem 1rem;
-    margin: 2px;
+    margin: 4px;
     height: auto;
     border: 1px solid;
     color: #555;
@@ -26,31 +99,94 @@
     box-shadow: 0 0 0 3px var(--darken-3);
 }
 
-::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+.btn-default {
+    border: 1px solid #42DCA3;
+    color: #42DCA3;
+    background-color: transparent;
 }
 
-li {
-    margin: 0 0 15px;
+.btn-default:hover, .btn-default:focus {
+    border: 1px solid #42DCA3;
+    outline: none;
+    color: #111;
+    background-color: #42DCA3;
+}
+
+.btn-circle {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 2px solid #fff;
+    border-radius: 100% !important;
+    font-size: 40px;
+    color: #fff;
+    background: transparent;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-circle:hover, .btn-circle:focus {
+    outline: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/*  HEADER/INTRO SECTION  */
+
+.intro {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/butterfly-bg-bw.jpg) no-repeat center center scroll;
+    background-color: #111;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro .intro-body .brand-heading {
+    font-size: 30px;
+}
+
+.intro .intro-body .intro-text {
     font-size: 18px;
 }
 
 @media (min-width: 768px) {
-    li {
-        margin: 0 0 15px;
-        font-size: 20px;
+    .intro {
+        height: 100%;
+        padding: 0;
     }
-    .contact-row {
-        text-align: center;
+    .intro .intro-body .brand-heading {
+        font-size: 50px;
+    }
+    .intro .intro-body .intro-text {
+        font-size: 26px;
     }
 }
 
 
-/*  HEADER SECTION  */
-
-
 /*  PORTFOLIO SECTION  */
+
+.portfolio-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #f2f2f2;
+    color: #111;
+    line-height: 1;
+}
 
 #portfolios {
     margin: 1rem 0;
@@ -97,7 +233,7 @@ li {
 }
 
 .modal {
-    color: #000;
+    color: #111;
     margin-top: 10%;
 }
 
@@ -105,20 +241,31 @@ li {
     line-height: 1.4;
 }
 
-#resume img {
-    /*border-radius: 50%;*/
-    margin-top: 20px;
-    width: 25%;
-    /*border: 1px solid #fff;*/
+
+/*  RESUME SECTION  */
+
+.resume-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background-color: #111;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.profile_image {
+    border-radius: 50%;
+    width: 15%;
     filter: grayscale(1);
     padding: 10px;
 }
 
-#resume img:hover {
+.profile_image:hover {
     transition: grayscale 0.5s;
     filter: grayscale(0);
     transition: all 600ms ease;
-
 }
 
 .resume-row {
@@ -135,38 +282,42 @@ li {
     display: inline-block;
     font-size: 20px;
     margin: 10px;
-    border: 0.5px solid white;
     padding: 10px;
-}
-
-.resume-item:hover {
-    background: #FF6A00;
+    background: rgba(255, 106, 0, .6);
     border-color: #FF6A00;
-    transition: all 600ms ease;
-    cursor: pointer; 
 }
 
-.resume-work-item {
+
+/*.resume-item:hover {
+    transition: all 600ms ease;
+    cursor: pointer;
+}*/
+
+
+/*.resume-work-item {
     padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
     transition: all 0.5s ease-in-out;
     border-bottom: .5px solid #FF6A00;
-}
+}*/
 
-.resume-work-item:first-child {
+
+/*.resume-work-item:first-child {
     border-top: .5px solid #FF6A00;
-}
+}*/
 
-.resume-work-item-hover {
-    background: rgba(255, 106, 0, .5);
+
+/*.resume-work-item-hover {
+    background: rgba(255, 106, 0, .6);
     transition: all 0.5s ease-in-out;
     cursor: pointer;
-}
+}*/
 
-.resume-work-item p {
+
+/*.resume-work-item p {
     margin-bottom: 15px;
-}
+}*/
 
 .resume-work-item-description {
     text-align: left;
@@ -178,12 +329,29 @@ li {
     border-color: #FF6A00;
 }
 
+.resume-section .btn {
+    color: #f2f2f2;
+}
+
+.resume-section li {
+    margin-left: 15px;
+}
+
+
+/*  CONTACT SECTION  */
+
+.contact-section {
+    background-color: rgba(255, 106, 0, .6);
+    padding-bottom: 50px;
+    padding: 50px 0;
+}
+
 .contact-icon {
     padding: 20px;
 }
 
 a .contact-icon {
-    color: white;
+    color: #fff;
     transition: all 0.5s ease-in-out;
 }
 
@@ -200,73 +368,18 @@ a .contact-icon:hover {
 }
 
 
-/*!
- * Start Bootstrap - Grayscale v3.3.7+1 (http://startbootstrap.com/template-overviews/grayscale)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
-body {
-    width: 100%;
-    height: 100%;
-    font-family: 'Dosis', sans-serif;
-    color: white;
-    background-color: black;
-}
-
-html {
-    width: 100%;
-    height: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0 0 20px;
-    text-transform: uppercase;
-    font-family: 'Dosis', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-p {
-    /*margin: 0 0 25px;*/
-    font-size: 18px;
-    line-height: 1;
-}
-
-@media (min-width: 768px) {
-    p {
-        /*margin: 0 0 35px;*/
-        font-size: 20px;
-        /*line-height: 1.6;*/
-    }
-}
-
-a {
-    color: #42DCA3;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
-
-a:hover, a:focus {
-    text-decoration: none;
-    color: #1d9b6c;
-}
-
-.light {
-    font-weight: 400;
-}
+/*  NAVBAR STYLES  */
 
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
     font-family: 'Dosis', sans-serif;
-    background-color: black;
+    background-color: #111;
 }
 
 .navbar-custom .navbar-toggle {
-    color: white;
+    color: #fff;
     background-color: rgba(255, 255, 255, 0.2);
     font-size: 12px;
 }
@@ -284,7 +397,7 @@ a:hover, a:focus {
 }
 
 .navbar-custom a {
-    color: white;
+    color: #fff;
 }
 
 .navbar-custom .nav li a {
@@ -313,7 +426,7 @@ a:hover, a:focus {
 }
 
 .navbar-custom .nav li.active a:hover {
-    color: white;
+    color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -328,148 +441,9 @@ a:hover, a:focus {
     }
     .navbar-custom.top-nav-collapse {
         padding: 0;
-        background: black;
+        background: #111;
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     }
-}
-
-.intro {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: white;
-    background: url(../img/butterfly-bg-bw.jpg) no-repeat center center scroll;
-    background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.intro .intro-body {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.intro .intro-body .brand-heading {
-    font-size: 30px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 18px;
-}
-
-@media (min-width: 768px) {
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
-    .intro .intro-body .brand-heading {
-        font-size: 50px;
-    }
-    .intro .intro-body .intro-text {
-        font-size: 26px;
-    }
-}
-
-.btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid white;
-    border-radius: 100% !important;
-    font-size: 40px;
-    color: white;
-    background: transparent;
-    -webkit-transition: background 0.3s ease-in-out;
-    -moz-transition: background 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out;
-}
-
-.btn-circle:hover, .btn-circle:focus {
-    outline: none;
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.btn-circle i.animated {
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s;
-}
-
-.btn-circle:hover i.animated {
-    -webkit-animation-name: pulse;
-    -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-}
-
-@-webkit-keyframes pulse {
-    0% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-    50% {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-@-moz-keyframes pulse {
-    0% {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-    50% {
-        -moz-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-    100% {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-.content-section {
-    padding-top: 50px;
-}
-
-.portfolio-section {
-    width: 100%;
-    padding: 50px 0;
-    background-color: white;
-    color: #000;
-    line-height: 1;
-}
-
-.resume-section {
-    width: 100%;
-    padding: 50px 0;
-    color: white;
-    /*background: url(../img/butterfly-bg-bw.jpg) no-repeat center center scroll;*/
-    background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.contact-section {
-    background-color: rgba(255, 106, 0, .5);
-    padding-bottom: 50px;
 }
 
 @media (min-width: 767px) {
@@ -484,49 +458,8 @@ a:hover, a:focus {
     }
 }
 
-.btn {
-    text-transform: uppercase;
-    font-family: 'Dosis', sans-serif;
-    font-weight: 400;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    border-radius: 0;
-}
 
-.btn-default {
-    border: 1px solid #42DCA3;
-    color: #42DCA3;
-    background-color: transparent;
-}
-
-.btn-default:hover, .btn-default:focus {
-    border: 1px solid #42DCA3;
-    outline: none;
-    color: black;
-    background-color: #42DCA3;
-}
-
-ul.banner-social-buttons {
-    margin-top: 0;
-}
-
-@media (max-width: 1199px) {
-    ul.banner-social-buttons {
-        margin-top: 15px;
-    }
-}
-
-@media (max-width: 767px) {
-    ul.banner-social-buttons li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-    ul.banner-social-buttons li:last-child {
-        margin-bottom: 0;
-    }
-}
+/*  FOOTER STYLES  */
 
 footer {
     padding: 50px 0;
@@ -534,28 +467,4 @@ footer {
 
 footer p {
     margin: 0;
-}
-
-::-moz-selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-::selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: rgba(255, 255, 255, 0.2);
-}
-
-img::selection {
-    background: transparent;
-}
-
-img::-moz-selection {
-    background: transparent;
-}
-
-body {
-    webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }

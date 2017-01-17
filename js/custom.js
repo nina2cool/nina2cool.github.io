@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+    // Functionality for the portfolio boxes
     $(function() {
         var selectedClass = "";
         $(".fil-cat").click(function() {
@@ -15,7 +15,6 @@ $(document).ready(function() {
 
         });
     });
-
 
 
     //Date functionality for displaying the copyright date in the footer
@@ -33,25 +32,32 @@ $(document).ready(function() {
         $('#currentYear').text(startDate + '-' + currentYearDate);
     }
 
-    $('.resume-work-item div').hide();
 
-    $('.resume-work-item').click(function() {
-        //console.log($(this));
-        $(this).children("div").toggle();
+    // Old code for some resume items that I used to have
 
-    });
+    // $('.resume-work-item div').hide();
+    //
+    // $('.resume-work-item').click(function() {
+    //     //console.log($(this));
+    //     $(this).children("div").toggle();
+    //
+    // });
+    //
+    // $('.resume-work-item').hover(function() {
+    //     $(this)
+    //         .addClass('resume-work-item-hover', 200);
+    // }, function() {
+    //     $(this).stop()
+    //         .attr("style", "")
+    //         .removeClass('resume-work-item-hover', 600);
+    // });
 
-    $('.resume-work-item').hover(function() {
-        $(this)
-            .addClass('resume-work-item-hover', 200);
-    }, function() {
-        $(this).stop()
-            .attr("style", "")
-            .removeClass('resume-work-item-hover', 600);
-    });
+    // Code to reveal phone, email, Github name, and LinkedIn profile when hovering
 
     $('.phone').hide();
     $('.email').hide();
+    $('.linkedin').hide();
+    $('.github').hide();
 
     $('#phone').hover(function() {
         $('.phone').show();
@@ -63,6 +69,18 @@ $(document).ready(function() {
         $('.email').show();
     }, function() {
         $('.email').hide();
+    });
+
+    $('#linkedin').hover(function() {
+        $('.linkedin').show();
+    }, function() {
+        $('.linkedin').hide();
+    });
+
+    $('#github').hover(function() {
+        $('.github').show();
+    }, function() {
+        $('.github').hide();
     });
 
 });
