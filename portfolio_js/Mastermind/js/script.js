@@ -8,6 +8,7 @@ $(document).ready(function() {
     var setSolutionLength = 4; // this is the number of characters for the solution
     var letters = ['a', 'b', 'c', 'd'];
     var solutionLength = solution.length;
+    var allGuessesArray = [];
 
     var numberOfGuesses = 0;
 
@@ -18,16 +19,14 @@ $(document).ready(function() {
         // first check if a solution already exists in local storage - if not, then create a solution.  if it does, do not create a new one. Probably should encrypt the solution (advanced).
         if (localStorage.getItem('solution')) {
             //console.log('do not create a new solution');
-        }
+        } else {
 
-        else {
-
-          for (var i = 0; i < 4; i++) {
-            var randomIndex = getRandomInt(0, letters.length);
-            solution += letters[randomIndex]; //same an concatenating strings, assumes empty starting string
-          }
-          //store in local storage
-          localStorage.setItem('solution', solution);
+            for (var i = 0; i < 4; i++) {
+                var randomIndex = getRandomInt(0, letters.length);
+                solution += letters[randomIndex]; //same an concatenating strings, assumes empty starting string
+            }
+            //store in local storage
+            localStorage.setItem('solution', solution);
 
         }
     }
@@ -44,28 +43,103 @@ $(document).ready(function() {
     $('.btn').click(function() {
         event.preventDefault();
 
-          var inputText = $('input').val();
-          console.log('your input is ' + inputText);
+        var inputText = $('input').val();
+        console.log('your input is ' + inputText);
 
-          var guessArray = inputText.split('');
-          console.log(guessArray);
+        allGuessesArray.push(inputText);
+        console.log(allGuessesArray);
 
-          //check that letters are valid
-          for(var i=0; i<guessArray.length; i++) {
+        var guessArray = inputText.split('');
+        console.log(guessArray);
 
-              for(var j=0; j<letters.length; i++) {
+        //check that letters are valid
 
-                if(guessArray[i] != letters[j]) {
-                  console.log('does not match');
-                  return false;
+        if (guessArray.length > setSolutionLength) {
+            console.log('your guess can only be ' + setSolutionLength + ' letters long - please try again');
+        } else {
+
+            Array.prototype.diff = function(letters) {
+                var ret = [];
+                for (var i in this) {
+                    if (letters.indexOf(this[i]) > -1) {
+                        ret.push(this[i]);
+                    }
                 }
+                return ret;
+            };
+
+            var lengthNewArray = guessArray.diff(letters).length;
+            console.log(lengthNewArray);
+            // console.log(guessArray.diff(letters));
+
+            if (lengthNewArray < setSolutionLength) {
+                console.log('invalid input');
+            }
+
+            else {
+
+              //valid input so carry on
+              console.log('valid input');
+
+
+              //1 - first check to see if any letters also match the exact position of the solution
+              //2 - then check to see if any letters of the guess are in the solution
+              //var guessArray = guess.split('');
+              var solutionArray = localStorage.getItem('solution').split('');
+              console.log(solutionArray);
+
+              //1 - first check to see if any letters also match the exact position of the solution
+              //2 - then check to see if any letters of the guess are in the solution
+              var guessLength = guessArray.length;
+              var solutionLength = solutionArray.length;
+              var correctLetterLocations = 0;
+
+
+              for (var i = 0; i <= (solutionLength - 1); i++) {
+
+                  if (guessArray[i] === solutionArray[i]) {
+                      correctLetterLocations++;
+                      guessArray[i] = null;
+                      solutionArray[i] = null;
+                  }
 
               }
 
 
-          }
+              var correctLetters = 0;
 
-      })
+              //now check remaining letters to look for similar values
+              for (var j = 0; j <= (guessLength - 1); j++) {
+
+                  var letterIndex = solutionArray.indexOf(guessArray[j]);
+
+                  if (letterIndex > -1) {
+                      correctLetters++;
+                  }
+
+              }
+
+              //we don't want to double count the correct letter positions, so we subtract that number out
+              correctLetters = correctLetters - correctLetterLocations;
+
+              //commenting out the colors since it was making my tests not pass.
+              //hint = colors.red(correctLetterLocations) + '-' + colors.white(correctLetters);
+
+              hint = correctLetterLocations + '-' + correctLetters;
+
+              console.log(hint);
+
+              
+
+
+            }
+
+
+
+        }
+
+
+    })
 
 
 
