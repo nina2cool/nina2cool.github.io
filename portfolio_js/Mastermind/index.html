@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="css/css-reset.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+    <!-- Custom Font -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container text-center">
+                <h1><strong>Mastermind</strong></h1>
+
+                <div class="row">
+
+                  <div class="col-md-8">
+                    <h3>
+                      Try to guess the 4 letter sequence containing letters a, b, c, or d.  You get 10 tries.  Letters could be repeated.
+                    </h3>
+
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="enter your 4-letter guess">
+                        </div>
+
+                        <!-- provide a warning if invalid input -->
+                        <div class="warning"></div>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+
+
+                    <div id="error"></div>
+                    <div id="announce-winner"></div>
+
+                    <!-- <button class="btn btn-primary" id="clear">Start Over</button> -->
+                  </div>
+
+                  <div class="col-md-4">
+                     Guesses that you guessed already:
+
+                     <div id="announce-number-of-guesses">Number of Guesses: 0 out of 10</div>
+
+
+                     <ol>
+                       <li>
+                         guess 1
+                       </li>
+                       <li>
+                          guess 2
+                       </li>
+                     </ol>
+                  </div>
+
+                </div>
+
+
+
+                <footer>
+                  <p>
+                    Programmed in JavaScript and jQuery, Designed in HTML/CSS by the amazing Christina McMillan Harder for ACA class
+                  </p>
+                </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
