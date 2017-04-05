@@ -192,6 +192,12 @@ li {
     margin: 1rem 0;
 }
 
+.update_text p {
+    margin: 15px;
+    padding: 15px;
+    box-shadow: inset 3px 3px #42DCA3, inset -3px -3px #42DCA3;
+}
+
 .tile {
     margin-bottom: 20px;
     -webkit-transform: scale(0);
@@ -210,6 +216,11 @@ li {
     box-shadow: inset 3px 3px #FF6A00, inset -3px -3px #FF6A00;
     transition: all 800ms ease;
     cursor: pointer;
+}
+
+.tile_inner_highlight {
+    /*border: 1px solid #42DCA3;*/
+    box-shadow: inset 3px 3px #42DCA3, inset -3px -3px #42DCA3;
 }
 
 .tile_inner h4 {
