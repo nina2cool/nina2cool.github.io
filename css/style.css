@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     font-size: 18px;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 @media (min-width: 768px) {
@@ -50,6 +50,8 @@ a:hover, a:focus {
 
 li {
     margin: 0 0 15px;
+    margin-right: 20px;
+    margin-left: 20px;
     font-size: 18px;
 }
 
@@ -226,6 +228,12 @@ li {
 .tile_inner h4 {
     margin: 0px;
     min-height: 40px;
+}
+
+.tile_inner h6 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    min-height: 26px;
 }
 
 .tile_inner img:hover {
@@ -478,4 +486,28 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+
+/*  RESPONSIVENESS  */
+
+@media (max-width: 350px) {
+    h4 {
+        font-size: 12px;
+        min-height: 50px;
+        min-width: 90px;
+        padding-top: 5px;
+        /*margin-left: 2px !important;*/
+    }
+    h6 {
+        font-size: 10px;
+        min-height: 50px;
+    }
+    .tile_inner {
+        min-height: 170px;
+        min-width: 100px;
+        word-wrap: break-word;
+        padding: 3px;
+        /*word-wrap: normal;*/
+    }
 }
