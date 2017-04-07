@@ -27,7 +27,7 @@ $(document).ready(function() {
             }
             //store in local storage
             localStorage.setItem('solution', solution);
-
+            //console.log(solution);
         }
     }
 
@@ -40,22 +40,23 @@ $(document).ready(function() {
     // step 3 - accept a guess from the user
 
     // is the guess valid?
-    $('.btn').click(function() {
+    $('#submit').click(function() {
         event.preventDefault();
 
         var inputText = $('input').val();
-        console.log('your input is ' + inputText);
+        //console.log('your input is ' + inputText);
 
         allGuessesArray.push(inputText);
-        console.log(allGuessesArray);
+        //console.log(allGuessesArray);
 
         var guessArray = inputText.split('');
-        console.log(guessArray);
+        //console.log(guessArray);
 
         //check that letters are valid
 
-        if (guessArray.length > setSolutionLength) {
+        if (guessArray.length != setSolutionLength) {
             console.log('your guess can only be ' + setSolutionLength + ' letters long - please try again');
+            $('#error').text("Your guess must be " + setSolutionLength + " letters long - please try again");
         } else {
 
             Array.prototype.diff = function(letters) {
@@ -69,68 +70,98 @@ $(document).ready(function() {
             };
 
             var lengthNewArray = guessArray.diff(letters).length;
-            console.log(lengthNewArray);
+            //console.log(lengthNewArray);
             // console.log(guessArray.diff(letters));
 
             if (lengthNewArray < setSolutionLength) {
-                console.log('invalid input');
-            }
+                //console.log('invalid input');
+                $('#error').text("Please input a valid guess - only use these letters: " + letters);
+            } else {
 
-            else {
-
-              //valid input so carry on
-              console.log('valid input');
-
-
-              //1 - first check to see if any letters also match the exact position of the solution
-              //2 - then check to see if any letters of the guess are in the solution
-              //var guessArray = guess.split('');
-              var solutionArray = localStorage.getItem('solution').split('');
-              console.log(solutionArray);
-
-              //1 - first check to see if any letters also match the exact position of the solution
-              //2 - then check to see if any letters of the guess are in the solution
-              var guessLength = guessArray.length;
-              var solutionLength = solutionArray.length;
-              var correctLetterLocations = 0;
+                //valid input so carry on
+                //console.log('valid input');
 
 
-              for (var i = 0; i <= (solutionLength - 1); i++) {
+                //1 - first check to see if any letters also match the exact position of the solution
+                //2 - then check to see if any letters of the guess are in the solution
+                //var guessArray = guess.split('');
+                var solutionArray = localStorage.getItem('solution').split('');
+                console.log("solution array is " + solutionArray);
 
-                  if (guessArray[i] === solutionArray[i]) {
-                      correctLetterLocations++;
-                      guessArray[i] = null;
-                      solutionArray[i] = null;
-                  }
+                //1 - first check to see if any letters also match the exact position of the solution
+                //2 - then check to see if any letters of the guess are in the solution
+                var guessLength = guessArray.length;
+                var solutionLength = solutionArray.length;
+                var correctLetterLocations = 0;
+                var correctLetters = 0;
 
+                console.log("solution length: " + solutionLength);
+
+                for (var i = 0; i <= (solutionLength - 1); i++) {
+
+                    if (guessArray[i] === solutionArray[i]) {
+                        correctLetterLocations++;
+                        guessArray[i] = null;
+                        solutionArray[i] = null;
+                    }
+
+                }
+
+                console.log("cll1: " + correctLetterLocations);
+                //console.log("cl1: " + correctLetters);
+                console.log("remainingsolutionarray " + solutionArray);
+                console.log("remainingguessarray " + guessArray);
+
+                var remainingSolutionArray = solutionArray;
+                var remainingGuessArray = guessArray;
+                //now check remaining letters to look for similar values
+                for (var j = 0; j < remainingSolutionArray.length; j++) {
+
+                    console.log("solution array position " + remainingSolutionArray[j]);
+                    console.log("guess array position " + remainingGuessArray[j]);
+
+                    var letterIndex = remainingSolutionArray.indexOf(remainingGuessArray[j]);
+                    console.log("letter index " + letterIndex);
+
+                    console.log("remainingsolutionarray2 " + solutionArray);
+
+                    if (letterIndex > -1 && remainingSolutionArray[j] != null && remainingGuessArray[j] != null) {
+                        correctLetters++;
+                    }
+                    remainingSolutionArray[j] = null;
+
+                    console.log("correct letters " + correctLetters);
+                }
+                //console.log("cl3: " + correctLetters);
+                //we don't want to double count the correct letter positions, so we subtract that number out
+                //correctLetters = correctLetters - correctLetterLocations;
+                //console.log("cl4: " + correctLetters);
+                //commenting out the colors since it was making my tests not pass.
+                //hint = colors.red(correctLetterLocations) + '-' + colors.white(correctLetters);
+
+                hint = correctLetterLocations + '-' + correctLetters;
+
+
+                //the hint should update, and maybe store a history of the hints?  nested arrays?
+                console.log(hint);
+
+                // add guesses to the list
+                $('.guesses').append("<li>Your guess: " + inputText + "<br>Hint: " + hint + "</li>");
+
+                $('input').val("");
+
+                numberOfGuesses++;
+
+                displayNumberOfGuesses();
+
+                if(correctLetterLocations === 4 && correctLetters === 0) {
+
+                displayHighScore(numberOfGuesses);
+
+                console.log('game is over');
+
+                
               }
-
-
-              var correctLetters = 0;
-
-              //now check remaining letters to look for similar values
-              for (var j = 0; j <= (guessLength - 1); j++) {
-
-                  var letterIndex = solutionArray.indexOf(guessArray[j]);
-
-                  if (letterIndex > -1) {
-                      correctLetters++;
-                  }
-
-              }
-
-              //we don't want to double count the correct letter positions, so we subtract that number out
-              correctLetters = correctLetters - correctLetterLocations;
-
-              //commenting out the colors since it was making my tests not pass.
-              //hint = colors.red(correctLetterLocations) + '-' + colors.white(correctLetters);
-
-              hint = correctLetterLocations + '-' + correctLetters;
-
-              console.log(hint);
-
-              
-
 
             }
 
@@ -142,19 +173,21 @@ $(document).ready(function() {
     })
 
 
+    function displayNumberOfGuesses() {
+        $('#announce-number-of-guesses').text("# of Guesses: " + numberOfGuesses);
+    }
 
 
-    function printBoard() {
-        for (var i = 0; i < board.length; i++) {
-            console.log(board[i]);
+    function displayHighScore(numGuesses) {
+
+        if (localStorage.getItem('highScore')) {
+            console.log("the high score is " + highScore);
+        } else {
+
+            localStorage.setItem('highScore', numGuesses);
+            console.log("new high score");
         }
-        return board;
     }
-
-    function printNumberOfGuesses() {
-        console.log('# of Guesses: ' + numberOfGuesses + ' out of 10');
-    }
-
 
     function generateHint(guess, solution) {
 
