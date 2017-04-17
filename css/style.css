@@ -65,6 +65,9 @@ li {
     }
 }
 
+.green-text {
+  color: #42DCA3;
+}
 
 /*  BUTTONS  */
 
@@ -293,7 +296,7 @@ li {
 }
 
 .resume-column {
-    padding: 20px;
+    padding: 0px 10px;
     vertical-align: middle;
 }
 
@@ -384,6 +387,10 @@ a .contact-icon:hover {
     font-size: 1.5em;
     text-align: center;
     transition: all 0.5s ease-in-out;
+}
+
+.contact_info {
+    font-size: 1.5em;
 }
 
 
@@ -491,7 +498,7 @@ footer p {
 
 /*  RESPONSIVENESS  */
 
-@media (max-width: 350px) {
+@media (max-width: 500px) {
     h4 {
         font-size: 12px;
         min-height: 50px;
@@ -510,4 +517,23 @@ footer p {
         padding: 3px;
         /*word-wrap: normal;*/
     }
+}
+
+@media (max-width: 767px) {
+
+    .resume-section i {
+      margin: 10px 0px;
+    }
+
+    .resume-row {
+        /*padding: 20px;*/
+        vertical-align: middle;
+        /*margin-top: 20px;*/
+
+    }
+
+
+    /*.resume-item-list {
+      margin: 20px 0px;
+    }*/
 }
