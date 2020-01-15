@@ -86,7 +86,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <p>
-                                You can filter my work by technology or by project type. Just after the portfolio, is the "Currently Working On" section. The green box around the projects below indicate that project is new or was updated on 4/5/17.
+                                You can filter my work by technology or by project type. Just after the portfolio, is the "Currently Working On" section. The green box around the projects below indicate that project is currently active.  Keep in mind that much of my current work is properietary to my employer and cannot be shown here.
                             </p>
                         </div>
                     </div>
@@ -95,15 +95,15 @@
                         <div class="col-md-5">
                             <h4>Filter by technology</h4>
                             <div class="toolbar mb2 mt2">
-                                <button class="btn fil-cat" data-rel="react">ReactJS</button>
-                                <button class="btn fil-cat" data-rel="express">Express.js</button>
+                                <button class="btn fil-cat" data-rel="wp">WordPress</button>
                                 <button class="btn fil-cat" data-rel="js">JavaScript & jQuery</button>
-                            </div>
-                            <div class="toolbar mb2 mt2">
-                                <button class="btn fil-cat" data-rel="mongo">MongoDB</button>
                                 <button class="btn fil-cat" data-rel="php">PHP & MySQL</button>
                                 <button class="btn fil-cat" data-rel="html">HTML & CSS</button>
-                                <button class="btn fil-cat" data-rel="wp">WordPress</button>
+                            </div>
+                            <div class="toolbar mb2 mt2">
+                              <button class="btn fil-cat" data-rel="react">ReactJS</button>
+                              <button class="btn fil-cat" data-rel="express">Express.js</button>
+                                <button class="btn fil-cat" data-rel="mongo">MongoDB</button>
                             </div>
                         </div>
                         <div class="col-md-2">
@@ -115,23 +115,15 @@
                             <br />
                             <h4>Filter by Project Type</h4>
                             <div class="toolbar mb2 mt2">
+                                <button class="btn fil-cat" data-rel="client">Client Websites</button>
+                                <button class="btn fil-cat" data-rel="mine">My Company Sites</button>
                                 <button class="btn fil-cat" data-rel="class">Class Projects</button>
                                 <button class="btn fil-cat" data-rel="personal">Personal Projects</button>
-                                <button class="btn fil-cat" data-rel="client">Client Websites</button>
-                                <button class="btn fil-cat" data-rel="mine">My Company Websites</button>
                             </div>
                         </div>
                     </div>
                     <div class="row" id="portfolios">
-                        <div class="tile scale-anm react mongo class all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalACAFinalProject">
-                                <h4>ACA Final Project</h4>
-                                <img src="img/portfolio/finalproject.jpg" alt="ACA Final Project" title="ACA Final Project" />
-                                <h6>
-                                    ReactJS/MongoDB &bull; Class Project
-                                    </h6>
-                            </div>
-                        </div>
+
                         <div class="tile scale-anm html mine all col-md-3 col-sm-4 col-xs-6">
                             <div class="tile_inner" data-toggle="modal" data-target="#modalHootFly">
                                 <h4>HootFly</h4>
@@ -142,11 +134,112 @@
                             </div>
                         </div>
                         <div class="tile scale-anm php client all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalUFOPlatform">
+                            <div class="tile_inner tile_inner_highlight" data-toggle="modal" data-target="#modalUFOPlatform">
                                 <h4>UFO Platform</h4>
                                 <img src="img/portfolio/ufoplatform_20170405.jpg" alt="UFO Platform" title="UFO Platform" />
                                 <h6>
                                     PHP MySQL &bull; Client Website
+                                    </h6>
+                            </div>
+                        </div>
+
+                        <div class="tile scale-anm wp client all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner" data-toggle="modal" data-target="#modalAngelaVanDeWalle">
+                                <h4>Angela VanDeWalle</h4>
+                                <img src="img/portfolio/angelavandewalle.jpg" alt="Angela VanDeWalle Design" title="Angela VanDeWalle Design" />
+                                <h6>
+                                    WordPress &bull; Client Website
+                                    </h6>
+                            </div>
+                        </div>
+                        <div class="tile scale-anm php mine all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner" data-toggle="modal" data-target="#modalSilentTimer">
+                                <h4>The Silent Timer</h4>
+                                <img src="img/portfolio/silenttimer.jpg" alt="The Silent Timer" title="The Silent Timer" />
+                                <h6>
+                                    PHP/MySQL &bull; Prior Company Website
+                                    </h6>
+                            </div>
+                        </div>
+
+                        <div class="tile scale-anm php personal all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner" data-toggle="modal" data-target="#modalHillCountryGear">
+                                <h4>Hill Country Gear</h4>
+                                <img src="img/portfolio/hcg.JPG" alt="Hill Country Gear" title="Hill Country Gear" />
+                                <h6>
+                                    PHP/MySQL &bull; Personal Project
+                                    </h6>
+                            </div>
+                        </div>
+                        <div class="tile scale-anm wp client all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner" data-toggle="modal" data-target="#modalCopelandJewelers">
+                                <h4>Copeland Jewelers</h4>
+                                <img src="img/portfolio/copelandjewelers.jpg" alt="Copeland Jewelers" title="Copeland Jewelers" />
+                                <h6>
+                                    WordPress &bull; Client Website
+                                    </h6>
+                            </div>
+                        </div>
+                        <div class="tile scale-anm react mongo class all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner" data-toggle="modal" data-target="#modalACAFinalProject">
+                                <h4>ACA Final Project</h4>
+                                <img src="img/portfolio/finalproject.jpg" alt="ACA Final Project" title="ACA Final Project" />
+                                <h6>
+                                    ReactJS/MongoDB &bull; Class Project
+                                    </h6>
+                            </div>
+                        </div>
+                        <div class="tile scale-anm wp client all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner" data-toggle="modal" data-target="#modalJudyNordseth">
+                                <h4>Judy Nordseth Photography</h4>
+                                <img src="img/portfolio/judynordseth.jpg" alt="Judy Nordseth Photography" title="Judy Nordseth Photography" />
+                                <h6>
+                                    WordPress &bull; Client Website
+                                    </h6>
+                            </div>
+                        </div>
+                        <div class="tile scale-anm wp client all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner" data-toggle="modal" data-target="#modalKittyKatFlat">
+                                <h4>KittyKatFlat</h4>
+                                <img src="img/portfolio/kittykatflat_20170405.jpg" alt="KittyKatFlat" title="KittyKatFlat" />
+                                <h6>
+                                    WordPress &bull; Client Website
+                                    </h6>
+                            </div>
+                        </div>
+                        <div class="tile scale-anm wp mine all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner tile_inner_highlight" data-toggle="modal" data-target="#modalUFO">
+                                <h4>UFO</h4>
+                                <img src="img/portfolio/ufo.jpg" alt="Unified Finance Organization" title="Unified Finance Organization" />
+                                <h6>
+                                    WordPress &bull; My Company Website
+                                    </h6>
+                            </div>
+                        </div>
+                        <div class="tile scale-anm html client all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner" data-toggle="modal" data-target="#modalLaunchAndHire">
+                                <h4>Launch and Hire</h4>
+                                <img src="img/portfolio/launchandhire.JPG" alt="Launch and Hire" title="Launch and Hire" />
+                                <h6>
+                                    HTML/CSS &bull; Client Website
+                                    </h6>
+                            </div>
+                        </div>
+                        <div class="tile scale-anm html client all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner" data-toggle="modal" data-target="#modalAquogeochem">
+                                <h4>Aquo:Geochem</h4>
+                                <img src="img/portfolio/aquogeochem.jpg" alt="Aquo:Geochem" title="Aquo:Geochem" />
+                                <h6>
+                                    HTML/CSS &bull; Client Website
+                                    </h6>
+                            </div>
+                        </div>
+                        <div class="tile scale-anm html personal all col-md-3 col-sm-4 col-xs-6">
+                            <div class="tile_inner tile_inner_highlight" data-toggle="modal" data-target="#modalPuzzle">
+                                <h4>Austin Puzzles</h4>
+                                <img src="img/portfolio/puzzle.JPG" alt="Puzzle site" title="Puzzle site" />
+                                <h6>
+                                    HTML/CSS &bull; Personal Project
                                     </h6>
                             </div>
                         </div>
@@ -186,24 +279,6 @@
                                     </h6>
                             </div>
                         </div>
-                        <div class="tile scale-anm wp client all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalAngelaVanDeWalle">
-                                <h4>Angela VanDeWalle</h4>
-                                <img src="img/portfolio/angelavandewalle.jpg" alt="Angela VanDeWalle Design" title="Angela VanDeWalle Design" />
-                                <h6>
-                                    WordPress &bull; Client Website
-                                    </h6>
-                            </div>
-                        </div>
-                        <div class="tile scale-anm php mine all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalSilentTimer">
-                                <h4>The Silent Timer</h4>
-                                <img src="img/portfolio/silenttimer.jpg" alt="The Silent Timer" title="The Silent Timer" />
-                                <h6>
-                                    PHP/MySQL &bull; Prior Company Website
-                                    </h6>
-                            </div>
-                        </div>
                         <div class="tile scale-anm js class all col-md-3 col-sm-4 col-xs-6">
                             <div class="tile_inner" data-toggle="modal" data-target="#modalRockPaperScissors">
                                 <h4>Rock Paper Scissors</h4>
@@ -231,86 +306,14 @@
                                     </h6>
                             </div>
                         </div>
-                        <div class="tile scale-anm php personal all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalHillCountryGear">
-                                <h4>Hill Country Gear</h4>
-                                <img src="img/portfolio/hcg.JPG" alt="Hill Country Gear" title="Hill Country Gear" />
-                                <h6>
-                                    PHP/MySQL &bull; Personal Project
-                                    </h6>
-                            </div>
-                        </div>
-                        <div class="tile scale-anm wp client all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalCopelandJewelers">
-                                <h4>Copeland Jewelers</h4>
-                                <img src="img/portfolio/copelandjewelers.jpg" alt="Copeland Jewelers" title="Copeland Jewelers" />
-                                <h6>
-                                    WordPress &bull; Client Website
-                                    </h6>
-                            </div>
-                        </div>
-                        <div class="tile scale-anm wp client all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalJudyNordseth">
-                                <h4>Judy Nordseth Photography</h4>
-                                <img src="img/portfolio/judynordseth.jpg" alt="Judy Nordseth Photography" title="Judy Nordseth Photography" />
-                                <h6>
-                                    WordPress &bull; Client Website
-                                    </h6>
-                            </div>
-                        </div>
-                        <div class="tile scale-anm wp client all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalKittyKatFlat">
-                                <h4>KittyKatFlat</h4>
-                                <img src="img/portfolio/kittykatflat_20170405.jpg" alt="KittyKatFlat" title="KittyKatFlat" />
-                                <h6>
-                                    WordPress &bull; Client Website
-                                    </h6>
-                            </div>
-                        </div>
-                        <div class="tile scale-anm wp mine all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalUFO">
-                                <h4>UFO</h4>
-                                <img src="img/portfolio/ufo.jpg" alt="Unified Finance Organization" title="Unified Finance Organization" />
-                                <h6>
-                                    WordPress &bull; My Company Website
-                                    </h6>
-                            </div>
-                        </div>
-                        <div class="tile scale-anm html client all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalLaunchAndHire">
-                                <h4>Launch and Hire</h4>
-                                <img src="img/portfolio/launchandhire.JPG" alt="Launch and Hire" title="Launch and Hire" />
-                                <h6>
-                                    HTML/CSS &bull; Client Website
-                                    </h6>
-                            </div>
-                        </div>
-                        <div class="tile scale-anm html client all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner" data-toggle="modal" data-target="#modalAquogeochem">
-                                <h4>Aquo:Geochem</h4>
-                                <img src="img/portfolio/aquogeochem.jpg" alt="Aquo:Geochem" title="Aquo:Geochem" />
-                                <h6>
-                                    HTML/CSS &bull; Client Website
-                                    </h6>
-                            </div>
-                        </div>
-                        <div class="tile scale-anm html personal all col-md-3 col-sm-4 col-xs-6">
-                            <div class="tile_inner tile_inner_highlight" data-toggle="modal" data-target="#modalPuzzle">
-                                <h4>Austin Puzzles</h4>
-                                <img src="img/portfolio/puzzle.JPG" alt="Puzzle site" title="Puzzle site" />
-                                <h6>
-                                    HTML/CSS &bull; Personal Project
-                                    </h6>
-                            </div>
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12 text-left">
                             <hr />
-                            <h2 class="text-center">Currently Working On:</h2>
+                            <h2 class="text-center">Some things I am currently working on:</h2>
                             <ol>
                                 <li>
-                                    Working my way through HackerRank to keep my skills sharp and practice JavaScript
+                                    Working my way through HackerRank to keep my skills sharp.
                                 </li>
                                 <li>
                                     I want to build another page on my site so I can list the tools and resources that I use when developing - maybe someone else will find it useful too.
@@ -318,31 +321,29 @@
                                 <li>
                                     Continuing to build new functionality to the UFO platform (PHP, MySQL). This involves updating to the new theme, as well as cleaning up the code and improving the UI/UX.
                                 </li>
-                                <li>
+                                <!-- <li>
                                     Converting a javascript Mastermind game that we did in ACA to a web app (similar to what I did with Pig Latin, Rock Paper Scissors, Towers of Hanoi, and Tic Tac Toe)
+                                </li> -->
+                                <li>
+                                    I was reviewing my portfolio on my phone and realized that it doesn't look great on the phone version, so I will update that. I also looked at my Pig Latin page, and decided it would be fun to figure out how to have the words transform on the screen (move around the screen).
                                 </li>
                                 <li>
-                                    I was reviewing my portfolio on my phone and realized that it doesn't look great on the phone version, so I will update that. I also looked at my Pig Latin page, and decided it would be fun to figure out how to have the words transform on the screen (move
-                                    around the screen). I don't know how to do that...yet.
+                                    I volunteered to build a website for my Girl Scout service unit. It is still a work in progress but I have hopes of completing it soon.
                                 </li>
-                                <li>
-                                    I volunteered to build a website for my Girl Scout service unit. I think I will build a custom WordPress theme (I'd like practice with that), and WP is a smart choice in this case since I can give editing access to multiple users. I will also be taking
-                                    over our cookie booth tool developed in php and Laravel.
-                                </li>
-                                <li>
+                                <!-- <li>
                                     Building a custom WordPress theme using my HootFly website as a template
-                                </li>
-                                <li>
+                                </li> -->
+                                <!-- <li>
                                     I'm trying out Sublime Text 3 as a text editor (using it to make this update!). I also want to check out VS Code. Atom and Dreamweaver are currently what I use. I never use the design view in Dreamweaver, only code view, so I don't really need it.
-                                </li>
+                                </li> -->
                                 <li>
-                                    Working through Codeacademy classes: Learn Git, Learn Sass, Ruby
+                                    Working through Codeacademy classes: Ruby, Python, Sass
                                 </li>
 
                             </ol>
-                            <h6><em>
+                            <!-- <h6><em>
                                 -Updated 4/26/17</em>
-                                </h6>
+                                </h6> -->
                         </div>
                     </div>
                 </div>
