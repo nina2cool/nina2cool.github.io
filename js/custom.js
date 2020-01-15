@@ -16,7 +16,6 @@ $(document).ready(function() {
             });
         });
 
-
         //Date functionality for displaying the copyright date in the footer
         //Enter the starting date for the copyright
         var startDate = 2016;
@@ -32,10 +31,7 @@ $(document).ready(function() {
             $('#currentYear').text(startDate + '-' + currentYearDate);
         }
 
-
         // Code to reveal phone, email, Github name, and LinkedIn profile when hovering
-
-
         $('.phone').hide();
         $('.email').hide();
         $('.linkedin').hide();
