@@ -1,0 +1,36 @@
+body {
+  margin-top: 70px;
+  padding-top: 17%;
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/hands.jpg) no-repeat center;
+}
+
+.navbar {
+  background: #002266;
+  color: white;
+}
+
+.player {
+  background: lightblue;
+  border-radius: 5px;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.winner_font {
+  background: #cc66ff;
+  border-radius: 5px;
+  padding: 20px;
+  font-weight: bold;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.fancy_font {
+  font-family: 'Bad Script', cursive;
+}
+
+footer p {
+  margin-top: 10px;
+}
